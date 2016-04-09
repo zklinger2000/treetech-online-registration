@@ -1,0 +1,32 @@
+/*============
+  Main Style
+============*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+/*  text-align: center;*/
+}
+h1, p{
+  text-align: center;
+}
+fieldset, legend {
+  border: none;
+}
+legend, label {
+/*  text-align: left;*/
+/*  display: block;*/
+}
+input {
+  text-align: left;
+}
+label.label-title {
+  display: block;
+}
+input[type=checkbox] {
+  
+}
