@@ -9,8 +9,11 @@ img {
 /*  width: 100%;*/
 }
 body {
-  background: url(/images/trees_768x1024.jpg) bottom center no-repeat;
-/*  font-family: 'Hind', sans-serif;*/
+  background: url(/images/trees_768x1024.jpg) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 header {
   margin: 0;
@@ -54,11 +57,12 @@ h2 {
 }
 .page-message p {
   color: rgb(255, 247, 216);
-  text-shadow: 1px 1px 1px rgba(22, 22, 22, .3);
+  text-shadow: 1px 1px 1px rgba(22, 44, 22, .2);
 }
 .page-message {
   background: #CEB312;
   padding: .25em;
+  border-bottom: 1px solid #9E8300;
 }
 hr {
   border-color: rgb(255, 247, 216);
@@ -74,22 +78,24 @@ legend {
   color: rgb(255, 247, 216);
   background: #0A6232;
   padding: .5em;
+  margin: .5em;
   -ms-transform: skewX(-15deg); /* IE 9 */
   -webkit-transform: skewX(-15deg); /* Safari */
   transform: skewX(-15deg);
+  position: relative;
+  top: .33em;
 }
 label {
   color: rgba(254, 227, 66, .8);
   text-shadow: 1px 1px 1px rgba(22, 22, 22, .3);
 }
 input {
-  border: none;
   background: rgba(22, 22, 22, .7);
   font-family: 'Hind', sans-serif;
 }
 .contact-info label {
   display: block;
-  margin-top: .5em;
+  margin-top: .9em;
 }
 .contact-info input {
   display: block;
@@ -105,21 +111,72 @@ input {
 }
 label.label-title {
   display: block;
+  color: rgb(255, 247, 216);
+  padding: 1em 0;
+  text-shadow: 2px 2px 5px rgba(22, 22, 22, .9);
+}
+label[for="other_topics"] {
+  display: block;
+  color: rgb(255, 247, 216);
+  padding: 1em 0 .5em;
+/*  margin: 0;*/
+  text-shadow: 2px 2px 5px rgba(22, 22, 22, .9);
 }
 textarea {
-  border: none;
   resize: none;
+/*  padding: 0;*/
   width: 100%;
-  background: blue;
+  background: rgba(22, 22, 22, .7);
 }
-input[type=checkbox] {
-  
+input[type=checkbox], input[type=radio] {
+  opacity: 0;
+  float: left;
+  width: 2em;
+/*  height: 55px;*/
 }
-input[type=text], input[type=tel], input[type=email] {
+input[type=checkbox] + label, input[type=radio] + label {
+  margin: 0;
+  line-height: 75px;
+  clear: none;
+  /* Left padding makes room for image */
+  padding: 55px 65px;
+  /* Make look clickable because they are */
+  cursor: pointer;
+}
+input[type=radio] + label {
+  background: url(/images/radio_off.png) left center no-repeat;
+  transition: .2s ease;
+}
+input[type=checkbox] + label {
+  background: url(/images/check_off.png) left center no-repeat;
+  transition: .2s ease;
+}
+input[type=radio]:checked + label {
+  background: url(/images/radio_on.png) left center no-repeat;
+}
+input[type=checkbox]:checked + label {
+  background: url(/images/check_on.png) left center no-repeat;
+}
+input[type=text], input[type=tel], input[type=email], textarea {
   padding: 0.5em;
   border-radius: 5px;
   border: 1px solid rgba(225, 225, 225, .2);
   color: rgb(255, 247, 216);
+  box-shadow: inset 1px 1px 6px 2px rgba(22, 22, 22, .5);
+}
+button {
+  border: none;
+  width: 100%;
+  padding: 1em;
+  margin: 2em 0;
+  color: #FEE342;
+  background: #0A6232;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px 2px rgba(22, 22, 22, .5);
+}
+footer {
+  color: #FEE342;
+  text-shadow: 0px 0px 4px rgba(22, 22, 22, 1);
 }
 
 /*=========
