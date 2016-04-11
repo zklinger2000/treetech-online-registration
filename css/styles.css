@@ -129,7 +129,7 @@ select {
   text-align:right;
   font-style: italic;
 }
-.contact-info input:-moz-placeholder {
+.contact-info input::-moz-placeholder {
   text-align:right;
   font-style: italic;
 }
