@@ -112,7 +112,7 @@ select {
   background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: 100% 50%;
-/*  cursor: pointer;*/
+  cursor: pointer;
 }
 .state-select {
   color: red;
@@ -160,7 +160,7 @@ input[type=checkbox], input[type=radio] {
 }
 input[type=checkbox] + label, input[type=radio] + label {
   margin: 0;
-  line-height: 55px;
+  line-height: 45px;
   clear: both;
   padding: 15px 65px;
 }
@@ -177,6 +177,9 @@ input[type=radio]:checked + label {
 }
 input[type=checkbox]:checked + label {
   background: url('../images/check_on.png') left center no-repeat;
+}
+input[type=checkbox] + label:hover, input[type=radio] + label:hover {
+  cursor: pointer;
 }
 input[type=text], input[type=tel], input[type=email], textarea, select {
   padding: 0.5em 1em;
