@@ -187,12 +187,18 @@ input[type=text], input[type=tel], input[type=email], textarea, select {
   border-radius: 5px;
   border: 1px solid rgba(225, 225, 225, .2);
   color: rgb(255, 247, 216);
-  box-shadow: inset 1px 1px 6px 2px rgba(22, 22, 22, .5);
+  box-shadow: 0 0 2px 2px rgba(22, 22, 22, .5);
+  transition: box-shadow 0.4s;
 }
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus, button:focus {
   outline: none;
 /*  border: 1px solid yellow;*/
-  box-shadow: 0 0 5px 5px rgba(225, 225, 225, .3);
+  box-shadow: 0 0 8px 5px rgba(225, 225, 225, .3);
+  transition: box-shadow 0.4s;
+}
+.employment select {
+  display: block;
+  width: 100%;
 }
 .btn-submit {
   width: 100%;
@@ -272,6 +278,11 @@ header {
 /*    padding: 0;*/
 /*    align-self: flex-start;*/
   }
+  .employment select {
+    margin: .5em 1.5em;
+    width: 480px;
+  }
+
   label.label-title {
     margin-left: 1.5em;
   }
@@ -331,10 +342,30 @@ header {
     max-width: 1024px;
     margin: 0 auto;
   }
-  fieldset {
-    max-width: 480px;
+  fieldset, .btn-submit {
+/*    max-width: 512px;*/
     margin: 0;
-    flex: 1;
+    flex: 1 0 480px;
+  }
+  fieldset.contact-info, fieldset.employment {
+    margin-left: 1em;
+    margin-right: 0.5em;
+  }
+  fieldset.contact-info {
+    order: 0;
+  }
+  fieldset.newsletter {
+    order: 1;
+  }
+  fieldset.employment {
+    order: 2;
+  }
+  .btn-submit {
+    order: 3;
+  }
+  fieldset.newsletter, .btn-submit {
+    margin-left: 0.5em;
+    margin-right: 1em;
   }
   textarea {
     max-width: calc(480px - 4em);
@@ -345,9 +376,9 @@ header {
   }
   .contact-info input, .contact-info select {
     width: 280px;
-  }  
-  button {
-    max-width: 480px;
+  }
+  .employment select {
+    width: calc(480px - 4em);
   }
 
 }
