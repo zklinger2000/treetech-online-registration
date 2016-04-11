@@ -207,7 +207,7 @@ button {
   background: #0A6232;
   border-radius: 5px;
   box-shadow: 1px 1px 6px 2px rgba(22, 22, 22, .5);
-/*  transition: background .2s;*/
+  transition: background .2s;
 }
 button:hover {
   background: #0A5222;
