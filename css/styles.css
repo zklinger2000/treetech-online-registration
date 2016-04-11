@@ -161,7 +161,7 @@ input[type=checkbox], input[type=radio] {
 }
 input[type=checkbox] + label, input[type=radio] + label {
   margin: 0;
-  line-height: 65px;
+  line-height: 45px;
   clear: none;
   padding: 15px 65px;
   cursor: pointer;
@@ -205,6 +205,15 @@ button {
   background: #0A6232;
   border-radius: 5px;
   box-shadow: 1px 1px 6px 2px rgba(22, 22, 22, .5);
+  transition: all .2s;
+}
+button:hover {
+  background: #0A5222;
+  color: #FEE362;
+}
+button:active {
+  background: #0A4212;
+  transform: scale(.98, .98);
 }
 footer {
   background: #222;
@@ -305,6 +314,8 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
   }
   fieldset {
     max-width: 480px;
