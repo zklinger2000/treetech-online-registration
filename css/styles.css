@@ -9,7 +9,7 @@ html {
   background-color: #222;
 }
 body {
-  background: url('../images/trees_768x1024.jpg') center center no-repeat;
+  background: url('../images/trees_768x1080.jpg') center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -285,6 +285,9 @@ header {
 
 @media screen and (min-width: 1024px) {
  
+  body {
+    background: url('../images/trees_1920x1080.jpg') center center no-repeat;
+  }
   header {
 /*    max-width: 1024px;*/
     padding-left: calc(50vw - 480px - 4em);
