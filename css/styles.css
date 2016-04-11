@@ -9,7 +9,7 @@ html {
   background-color: #222;
 }
 body {
-  background: url('images/trees_768x1024.jpg') center center no-repeat;
+  background: url('../images/trees_768x1024.jpg') center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -110,7 +110,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url('images/arrow.png');
+  background-image: url('../images/arrow.png');
   background-repeat: no-repeat;
   background-position: 100% 50%;
   cursor: pointer;
@@ -167,18 +167,18 @@ input[type=checkbox] + label, input[type=radio] + label {
   cursor: pointer;
 }
 input[type=radio] + label {
-  background: url("images/radio_off.png") left center no-repeat;
+  background: url('../images/radio_off.png') left center no-repeat;
   transition: .2s ease;
 }
 input[type=checkbox] + label {
-  background: url("images/check_off.png") left center no-repeat;
+  background: url('../images/check_off.png') left center no-repeat;
   transition: .2s ease;
 }
 input[type=radio]:checked + label {
-  background: url("images/radio_on.png") left center no-repeat;
+  background: url('../images/radio_on.png') left center no-repeat;
 }
 input[type=checkbox]:checked + label {
-  background: url("images/check_on.png") left center no-repeat;
+  background: url('../images/check_on.png') left center no-repeat;
 }
 input[type=text], input[type=tel], input[type=email], textarea, select {
   padding: 0.5em 1em;
