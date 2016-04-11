@@ -8,6 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -39,7 +40,18 @@
       <label for="city">City</label>
       <input type="text" id="city" name="city">
       <label for="state">State</label>
-      <input type="text" id="state" name="state">
+      <select id="state" name="state" placeholder="Choose a state"></select>
+      <script>
+      $(document).ready(function() {
+        var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+        var $select = $('select');
+        var html = '<option value="" class="state-select" disabled selected>Choose State</option>';
+        $.each(states, function(key, state) {
+          html += '<option value="' + state + '">' + state + '</option>';
+        });
+        $select.html(html);        
+      });
+      </script>
       <label for="zipcode">Zip Code</label>
       <input type="text" id="zipcode" name="zip_code"> 
     </fieldset>
@@ -47,12 +59,12 @@
       <legend>Newsletter</legend>
       <!-- newsletters to receive -->
       <label class="label-title">Select the newsletters you would like to receive</label>
-      <input type="checkbox" id="html" value="news_html" name="newsletters">
-      <label class="light" for="html">HTML News</label><br>
-      <input type="checkbox" id="css" value="news_css" name="newsletters">
-      <label class="light" for="css">CSS News</label><br>
-      <input type="checkbox" id="javascript" value="news_javascript" name="newsletters">
-      <label class="light" for="javascript">Javascript News</label><br>
+      <input type="checkbox" id="arbor" value="news_arbor" name="newsletters">
+      <label for="arbor">ISA News</label><br>
+      <input type="checkbox" id="isa" value="news_isa" name="newsletters">
+      <label for="isa">Arborist News</label><br>
+      <input type="checkbox" id="treeworking" value="news_treeworking" name="newsletters">
+      <label for="treeworking">Jobs Board</label><br>
       <!-- format in which to receive -->
       <label class="label-title">Newsletter format</label>
       <input type="radio" id="html_format" value="html_format" name="news_format">

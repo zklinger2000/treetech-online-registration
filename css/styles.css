@@ -5,8 +5,8 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
-img {
-/*  width: 100%;*/
+html {
+  background-color: #222;
 }
 body {
   background: url(/images/trees_768x1024.jpg) center center no-repeat;
@@ -66,13 +66,14 @@ h2 {
 }
 hr {
   border-color: rgb(255, 247, 216);
-  margin: .5em;
+  margin: 1.5em;
 }
 fieldset, legend {
   border: none;
+  margin: 25px auto;
 }
 fieldset {
-  background: rgba(22, 22, 22, .5)
+  background: rgba(22, 22, 22, .6);
 }
 legend {
   color: rgb(255, 247, 216);
@@ -86,18 +87,34 @@ legend {
   top: .33em;
 }
 label {
-  color: rgba(254, 227, 66, .8);
-  text-shadow: 1px 1px 1px rgba(22, 22, 22, .3);
+  color: rgba(254, 227, 66, .9);
+  text-shadow: 0px 0px 4px rgba(22, 22, 22, .7);
 }
-input {
+input, select {
   background: rgba(22, 22, 22, .7);
   font-family: 'Hind', sans-serif;
+}
+select {
+/*  margin-left: 1em;*/
+  height: 2.5em;
+  line-height: 1em;
+  padding: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/images/arrow.png');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  cursor: pointer;
+}
+.state-select {
+  color: red;
 }
 .contact-info label {
   display: block;
   margin-top: .9em;
 }
-.contact-info input {
+.contact-info input, .contact-info select {
   display: block;
   width: 100%;
 }
@@ -131,7 +148,7 @@ textarea {
 input[type=checkbox], input[type=radio] {
   opacity: 0;
   float: left;
-  width: 2em;
+  width: 1em;
 /*  height: 55px;*/
 }
 input[type=checkbox] + label, input[type=radio] + label {
@@ -157,12 +174,17 @@ input[type=radio]:checked + label {
 input[type=checkbox]:checked + label {
   background: url(/images/check_on.png) left center no-repeat;
 }
-input[type=text], input[type=tel], input[type=email], textarea {
-  padding: 0.5em;
+input[type=text], input[type=tel], input[type=email], textarea, select {
+  padding: 0.5em 1em;
   border-radius: 5px;
   border: 1px solid rgba(225, 225, 225, .2);
   color: rgb(255, 247, 216);
   box-shadow: inset 1px 1px 6px 2px rgba(22, 22, 22, .5);
+}
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus, button:focus {
+  outline: 1px solid rgba(225, 225, 225, .5);
+/*  border: 1px solid yellow;*/
+  box-shadow: 0 0 5px 1px rgba(225, 225, 225, .3);
 }
 .btn-submit {
   width: 100%;
@@ -172,15 +194,22 @@ button {
   border: none;
   width: calc(100% - 2em);
   padding: 1em 1.5em;
-  margin: 2em 1em;
+  margin: 0 1em;
   color: #FEE342;
   background: #0A6232;
   border-radius: 5px;
   box-shadow: 1px 1px 6px 2px rgba(22, 22, 22, .5);
 }
 footer {
-  color: #FEE342;
+  background: #222;
+  color: rgb(255, 247, 216);
   text-shadow: 0px 0px 4px rgba(22, 22, 22, 1);
+  margin-top: 100px;
+/*  margin-bottom: 0;*/
+}
+footer p {
+  margin: 0;
+  padding: 1em 0 2em;
 }
 
 /*=========
@@ -189,4 +218,52 @@ footer {
 header {
   display: flex;
   justify-content: center;
+}
+
+
+/*===============
+  Media Queries
+===============*/
+
+@media screen and (min-width: 768px) {
+  
+  hr {
+    max-width: 540px;
+    margin: 1.5em auto;
+  }
+  
+  fieldset {
+    max-width: 540px;
+/*    align-self: center;*/
+    margin: 50px auto 0px;
+  }
+  legend {
+    margin-left: 2em;
+  }
+  button {
+    max-width: 540px;
+    margin-top: 1em;
+  }
+  .contact-info label {
+    display: inline-block;
+    margin: 2em 1em 0;
+    width: 140px;
+    text-align: right;
+  }
+  .contact-info input, .contact-info select {
+    display: inline;
+    width: 330px;
+/*    padding: 0;*/
+/*    align-self: flex-start;*/
+  }
+  label.label-title {
+    margin-left: 1.5em;
+  }
+  label[for="other_topics"] {
+    padding: 1em 1.5em .5em;
+  }
+  textarea {
+    max-width: calc(540px - 4em);
+    margin: auto 1.5em;
+  }
 }
