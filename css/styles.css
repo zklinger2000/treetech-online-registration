@@ -115,7 +115,7 @@ select {
   cursor: pointer;
 }
 .state-select {
-  color: red;
+  color: #666;
 }
 .contact-info label {
   display: block;
