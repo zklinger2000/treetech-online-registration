@@ -163,24 +163,22 @@ input[type=checkbox] + label, input[type=radio] + label {
   margin: 0;
   line-height: 65px;
   clear: none;
-  /* Left padding makes room for image */
   padding: 15px 65px;
-  /* Make look clickable because they are */
   cursor: pointer;
 }
 input[type=radio] + label {
-  background: url(/images/radio_off.png) left center no-repeat;
+  background: url("/images/radio_off.png") left center no-repeat;
   transition: .2s ease;
 }
 input[type=checkbox] + label {
-  background: url(/images/check_off.png) left center no-repeat;
+  background: url("/images/check_off.png") left center no-repeat;
   transition: .2s ease;
 }
 input[type=radio]:checked + label {
-  background: url(/images/radio_on.png) left center no-repeat;
+  background: url("/images/radio_on.png") left center no-repeat;
 }
 input[type=checkbox]:checked + label {
-  background: url(/images/check_on.png) left center no-repeat;
+  background: url("/images/check_on.png") left center no-repeat;
 }
 input[type=text], input[type=tel], input[type=email], textarea, select {
   padding: 0.5em 1em;
