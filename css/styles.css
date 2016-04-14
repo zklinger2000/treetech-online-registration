@@ -20,7 +20,6 @@ header {
   padding: 1em 0;
   color: #FEE342;
   background: #0A6232;
-/*  border-bottom: 2px solid #CEB312;*/
 }
 header div, h1 {
   padding: 0 .5em;
@@ -35,7 +34,6 @@ h2.large, p.large {
 h1 {
   display: flex;
   flex-direction: column;
-/*  padding: 0;*/
   margin: 0;
   line-height: 1.1em;
 }
@@ -56,7 +54,6 @@ h2 {
   margin: 0;
   position: relative;
   top: .5em;
-/*  align-self: center;*/
 }
 h2.large {
   color: #FEE342;
@@ -104,7 +101,6 @@ input, select {
   font-family: 'Hind', sans-serif;
 }
 select {
-/*  margin-left: 1em;*/
   height: 2.5em;
   line-height: 1em;
   padding: 1em;
@@ -144,12 +140,10 @@ label[for="other_topics"] {
   display: block;
   color: rgb(255, 247, 216);
   padding: 1em 0 .5em;
-/*  margin: 0;*/
   text-shadow: 2px 2px 5px rgba(22, 22, 22, .9);
 }
 textarea {
   resize: none;
-/*  padding: 0;*/
   width: 100%;
   background: rgba(22, 22, 22, .7);
 }
@@ -157,7 +151,6 @@ input[type=checkbox], input[type=radio] {
   opacity: 0;
   float: left;
   width: 1em;
-/*  height: 55px;*/
 }
 input[type=checkbox] + label, input[type=radio] + label {
   margin: 0;
@@ -192,7 +185,6 @@ input[type=text], input[type=tel], input[type=email], textarea, select {
 }
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus, select:focus, button:focus {
   outline: none;
-/*  border: 1px solid yellow;*/
   box-shadow: 0 0 8px 5px rgba(225, 225, 225, .3);
   transition: box-shadow 0.4s;
 }
@@ -203,7 +195,6 @@ input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea
 .btn-submit {
   width: 100%;
   text-align: center;
-/*  cursor: pointer;*/
 }
 button {
   border: none;
@@ -227,7 +218,6 @@ footer {
   color: rgb(255, 247, 216);
   text-shadow: 0px 0px 4px rgba(22, 22, 22, 1);
   margin-top: 100px;
-/*  margin-bottom: 0;*/
 }
 footer p {
   margin: 0;
@@ -237,11 +227,11 @@ footer p {
 /*=========
   Flexbox
 =========*/
+
 header {
   display: flex;
   justify-content: center;
 }
-
 
 /*===============
   Media Queries
@@ -253,10 +243,8 @@ header {
     max-width: 540px;
     margin: 1.5em auto;
   }
-  
   fieldset {
     max-width: 540px;
-/*    align-self: center;*/
     margin: 50px auto 0px;
   }
   legend {
@@ -275,14 +263,11 @@ header {
   .contact-info input, .contact-info select {
     display: inline;
     width: 330px;
-/*    padding: 0;*/
-/*    align-self: flex-start;*/
   }
   .employment select {
     margin: .5em 1.5em;
     width: 480px;
   }
-
   label.label-title {
     margin-left: 1.5em;
   }
@@ -301,12 +286,9 @@ header {
     background: url('../images/trees_1920x1080.jpg') center center no-repeat;
   }
   header {
-/*    max-width: 1024px;*/
     padding-left: calc(50vw - 480px - 4em);
     padding-right: calc(50vw - 480px - 4em);
     flex-direction: row;
-/*    align-items: center;*/
-/*    justify-content: flex-start;*/
     border-bottom: 1px solid #003202;
   }
   hr {
@@ -315,10 +297,7 @@ header {
   .header-large {
     display: flex;
     flex-direction: column;
-/*    margin-right: auto;*/
     flex: 1;
-/*    text-align: center;*/
-/*    align-self: center;*/
   }
   header h1 {
     margin-right: auto;
@@ -330,7 +309,6 @@ header {
     display: inline-flex;
     flex: 1;
     align-self: center;
-/*    text-align: right;*/
   }
   div.page-message {
     display: none;
@@ -343,7 +321,6 @@ header {
     margin: 0 auto;
   }
   fieldset, .btn-submit {
-/*    max-width: 512px;*/
     margin: 0;
     flex: 1 0 480px;
   }
@@ -380,5 +357,4 @@ header {
   .employment select {
     width: calc(480px - 4em);
   }
-
 }
